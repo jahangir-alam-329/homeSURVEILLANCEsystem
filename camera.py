@@ -53,6 +53,7 @@ def camera():
     
 
     # Database connection setup
+    # create database in xampp server i.e, "facial_recognition" and table name "users"
     def connect_to_database():
         return mysql.connector.connect(
             host="localhost",
@@ -138,30 +139,8 @@ def camera():
             names.append(name)
         return frame, names
 
-    # Streamlit UI setup
-    # st.title("Facial Recognition with Webcam and MySQL")
-    # st.write("This app captures video from your webcam, compares faces in real-time, and matches them with stored images in MySQL database.")
-
-
-
-
-
-    # ....................................................................................
-    # # Option to upload new image
-    # uploaded_image = st.file_uploader("Upload a New Image for Registration", type=["jpg", "png", "jpeg"])
-    # if uploaded_image is not None:
-    #     # Show uploaded image
-    #     st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
-    #     name = st.text_input("Enter Name for this Image")
-
-    #     if st.button("Save Image to Database"):
-    #         if name:
-    #             img = Image.open(uploaded_image)
-    #             insert_image_to_db(name, img)
-    #             st.success(f"Image for {name} saved to the database!")
-    #         else:
-    #             st.error("Please enter a name!")
-    # .............................................................................................
+    
+       # .............................................................................................
 
 
 
